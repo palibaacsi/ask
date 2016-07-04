@@ -1,48 +1,62 @@
 <?php
 /**
- * The template for displaying single posts.
+ * The main template file. 
  * @package highwind
  * @since 1.0
  */
-?>
 
-<?php
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-get_header();
+
+// File Security Check
+if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( __( 'You do not have sufficient permissions to access this page!', 'highwind' ) );
+}
 ?>
+<?php get_header(); ?>
 
 <?php highwind_content_before(); ?>
 
 <section class="content" role="main">
 
-	<?php highwind_content_top();
+	<?php highwind_content_top(); ?>
 
-		if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php get_template_part( 'loop' ); ?>
 
-			<?php highwind_entry_top();
+	<?php else : ?>
 
-//			if ( is_category( '38' ) ) {
+		<article id="post-0" class="post no-results not-found">
 
-//				get_template_part( 'faq', get_post_format() );
+			<header class="entry-header">
 
-//			} else {
+				<?php highwind_content_header_top(); ?>
 
-				get_template_part( 'content', get_post_format() );
+				<h1 class="entry-title"><?php _e( 'Nothing Found', 'highwind' ); ?></h1>
 
-//			}
+				<?php highwind_content_header_bottom(); ?>
 
-			highwind_entry_bottom(); ?>
+			</header><!-- .entry-header -->
 
-		</article><!-- #post-<?php the_ID(); ?> -->
+			<div class="entry-content">
 
-	<?php endwhile; // end of the loop. ?>
+				<?php highwind_content_entry_top(); ?>
+
+				<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'highwind' ); ?></p>
+
+				<?php get_search_form(); ?>
+
+				<?php highwind_content_entry_bottom(); ?>
+
+			</div><!-- .entry-content -->
+
+		</article><!-- #post-0 -->
+
+	<?php endif; ?>
 
 	<?php highwind_content_bottom(); ?>
 
-</section><!-- /.content -->
+</section>
 
-<?php highwind_content_after();
+<?php highwind_content_after(); ?>
 
-get_footer();
+<?php get_footer(); ?>
