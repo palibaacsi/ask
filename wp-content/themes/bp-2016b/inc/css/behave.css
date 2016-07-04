@@ -1,0 +1,36 @@
+
+
+
+#acf-field-field_5419cb038fa47_0_field_5419cb788fa49:focus{
+	
+	/* The following three rules make a difference in the script */
+	overflow:hidden;
+
+	
+	
+	border:1px solid #999;
+	padding:10px;
+	font-family: monospace;
+	margin:0;
+	display:block;
+	outline:none;
+	}
+	#acf-field-field_5419cb038fa47_0_field_5419cb788fa49:focus:focus{
+		border-color:#333;
+	}
+.container{
+	position:relative;
+	display:inline-block;
+	}
+	.line-nums{
+		font-size:13px;
+		line-height: 19.4px;
+		padding:18px 4px 10px 4px;
+		background: #EEE;
+		position: absolute;
+		width: 20px;
+		left: -28px;
+		bottom: 0;
+		top: 0;
+		text-align:right;
+		}

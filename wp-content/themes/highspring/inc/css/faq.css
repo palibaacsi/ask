@@ -1,0 +1,31 @@
+.post-title:before {
+	left: -60px;
+	content: '\201c';
+}
+
+.post-title:after {
+	right: -30px;
+	content: '\201d';
+}
+
+.post-title {
+	text-align: center;
+	position: relative;
+	bottom: 3rem;
+	margin: 2rem 0;
+}
+
+.post-title a {
+	position: relative;
+	top: 3rem;
+	margin: 1rem 4rem;
+}
+
+.post-title:before, .post-title:after {
+	position: absolute;
+	font-size: 250px;
+	color: #53a1b8;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: 300px;
+}

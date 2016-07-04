@@ -1,0 +1,67 @@
+/*
+	Theme Name: HighSpring
+	template: highwind
+*/
+
+
+/*
+// Targets the headings
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .heading a, .omega a, .psi a, .alpha a, .beta a, .gamma a, .delta a{
+   color: #xxxxxx;
+} 
+/*Targets the main navigation menu
+.main-nav ul.menu a {
+   color: rgba(248,248,249,.2);
+}
+
+/*Targets links that aren't otherwise targeted
+a{
+   color: #xxxxxx;
+}
+
+/*Targets the header
+.header{
+   background-color: #xxxxxx;
+}
+
+
+html, body, body.custom-background, .inner-wrap {
+	background-color: rgba(248,248,249,.2) !important;
+	background: rgba(248,248,249,.2) !important;
+}
+*/
+
+.home .page-title, .footer p {
+    display: none;
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+h1, footer {
+	color: red;
+	text-align: center;
+}
+main {
+	width: 100%;
+}
+.site-intro {
+	
+    background: rgba(22,22,22,.4);
+}
+.right, .left {
+	width: 50%;
+	float: left;
+}
+.inside {
+	padding: 1rem 2rem;
+	font-size: 1.8rem; 
+}
+
+@media only screen and (min-width: 769px) {
+	.site-intro .site-title, .site-intro .site-description { 
+		font-size: 3rem;
+/*		   -webkit-text-stroke: 1px red; */
+	}
+}
